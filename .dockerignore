@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.gitignore
+*.md
+.vscode
+.idea
+test-results
+playwright-report
+.env
+.env.*
