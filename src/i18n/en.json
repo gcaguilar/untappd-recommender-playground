@@ -1,0 +1,82 @@
+{
+  "common": {
+    "backToHome": "Back to home",
+    "backToBeers": "Back to beers",
+    "loading": "Loading...",
+    "error": "Error"
+  },
+  "home": {
+    "title": "Beer Recommender",
+    "description": "Discover and search beers",
+    "subtitle": "Search and discover amazing beers from around the world"
+  },
+  "search": {
+    "placeholder": "Search beers...",
+    "button": "Search",
+    "clear": "Clear search"
+  },
+  "beerList": {
+    "loadMore": "Load more",
+    "noBeersFound": "No beers found",
+    "noResults": "No results for \"{query}\". Try a different search.",
+    "noBeersAvailable": "No beers available.",
+    "fetchError": "Failed to load beers. Please try again."
+  },
+  "beerDetail": {
+    "title": "Beer Detail",
+    "notFound": "Beer not found",
+    "failedToLoad": "Failed to load beer details",
+    "description": "Description",
+    "firstBrew": "First Brew",
+    "volume": "Volume",
+    "boilVolume": "Boil Volume",
+    "attenuation": "Attenuation",
+    "foodPairing": "Food Pairing",
+    "ingredients": "Ingredients",
+    "malt": "Malt",
+    "hops": "Hops",
+    "yeast": "Yeast",
+    "brewersTips": "Brewer's Tips",
+    "abvSuffix": "% ABV",
+    "ibuSuffix": " IBU"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "heading": "404",
+    "message": "Page not found"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español"
+  },
+  "untappd": {
+    "appTitle": "Untappd Beer Recommender",
+    "appDescription": "Get personalized beer recommendations based on your Untappd history",
+    "findUser": "Find your Untappd profile",
+    "findUserDescription": "Enter your Untappd username to load your beer history and get recommendations",
+    "usernamePlaceholder": "untappd_username",
+    "loadHistory": "Load history",
+    "userNotFound": "User not found. Check the username and try again.",
+    "privateUser": "This user's profile is private. They need to make their check-ins public.",
+    "missingCredentials": "API credentials are not configured. Please configure Untappd API credentials.",
+    "rateLimit": "Too many requests. Please wait a moment and try again.",
+    "emptyHistory": "This user has no checkins. Nothing to recommend from.",
+    "checkins": "Check-ins",
+    "avgRating": "Avg Rating",
+    "uniqueBeers": "Unique Beers",
+    "topStyle": "Top Style",
+    "searchBeers": "Search beers...",
+    "allStyles": "All styles",
+    "sortByDate": "By date",
+    "sortByRating": "By rating",
+    "sortByAbv": "By ABV",
+    "noBeersFound": "No beers found matching your filters",
+    "recommend": "Recommend",
+    "beers": "beers",
+    "changeUser": "Change user",
+    "backToHistory": "Back to history",
+    "recommendationsFor": "Recommendations based on",
+    "topRecommendations": "Top Recommendations",
+    "noRecommendations": "No recommendations found. Try selecting a different beer."
+  }
+}

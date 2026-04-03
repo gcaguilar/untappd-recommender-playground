@@ -1,0 +1,82 @@
+{
+  "common": {
+    "backToHome": "Volver al inicio",
+    "backToBeers": "Volver a las cervezas",
+    "loading": "Cargando...",
+    "error": "Error"
+  },
+  "home": {
+    "title": "Recomendador de Cervezas",
+    "description": "Descubre y busca cervezas",
+    "subtitle": "Busca y descubre cervezas increíbles de todo el mundo"
+  },
+  "search": {
+    "placeholder": "Buscar cervezas...",
+    "button": "Buscar",
+    "clear": "Limpiar búsqueda"
+  },
+  "beerList": {
+    "loadMore": "Cargar más",
+    "noBeersFound": "No se encontraron cervezas",
+    "noResults": "No hay resultados para \"{query}\". Prueba con otra búsqueda.",
+    "noBeersAvailable": "No hay cervezas disponibles.",
+    "fetchError": "Error al cargar las cervezas. Inténtalo de nuevo."
+  },
+  "beerDetail": {
+    "title": "Detalle de Cerveza",
+    "notFound": "Cerveza no encontrada",
+    "failedToLoad": "Error al cargar los detalles de la cerveza",
+    "description": "Descripción",
+    "firstBrew": "Primera elaboración",
+    "volume": "Volumen",
+    "boilVolume": "Volumen de ebullición",
+    "attenuation": "Atenuación",
+    "foodPairing": "Maridaje",
+    "ingredients": "Ingredientes",
+    "malt": "Malta",
+    "hops": "Lúpulos",
+    "yeast": "Levadura",
+    "brewersTips": "Consejos del cervecero",
+    "abvSuffix": "% ABV",
+    "ibuSuffix": " IBU"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "heading": "404",
+    "message": "Página no encontrada"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español"
+  },
+  "untappd": {
+    "appTitle": "Recomendador de Cervezas Untappd",
+    "appDescription": "Obtén recomendaciones personalizadas basadas en tu historial de Untappd",
+    "findUser": "Encuentra tu perfil de Untappd",
+    "findUserDescription": "Introduce tu nombre de usuario de Untappd para cargar tu historial y obtener recomendaciones",
+    "usernamePlaceholder": "nombre_de_usuario",
+    "loadHistory": "Cargar historial",
+    "userNotFound": "Usuario no encontrado. Revisa el nombre e inténtalo de nuevo.",
+    "privateUser": "El perfil de este usuario es privado. Necesita hacer públicos sus check-ins.",
+    "missingCredentials": "Las credenciales de la API no están configuradas.",
+    "rateLimit": "Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.",
+    "emptyHistory": "Este usuario no tiene check-ins. Nada que recomendar.",
+    "checkins": "Check-ins",
+    "avgRating": "Valoración media",
+    "uniqueBeers": "Cervezas únicas",
+    "topStyle": "Estilo top",
+    "searchBeers": "Buscar cervezas...",
+    "allStyles": "Todos los estilos",
+    "sortByDate": "Por fecha",
+    "sortByRating": "Por valoración",
+    "sortByAbv": "Por ABV",
+    "noBeersFound": "No se encontraron cervezas con esos filtros",
+    "recommend": "Recomendar",
+    "beers": "cervezas",
+    "changeUser": "Cambiar usuario",
+    "backToHistory": "Volver al historial",
+    "recommendationsFor": "Recomendaciones basadas en",
+    "topRecommendations": "Top Recomendaciones",
+    "noRecommendations": "No se encontraron recomendaciones. Prueba con otra cerveza."
+  }
+}
