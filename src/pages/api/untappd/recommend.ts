@@ -3,6 +3,8 @@ import { buildUserProfile, searchCandidateBeers } from "@/services/userHistorySe
 import { generateRecommendations } from "@/engine/recommendationEngine"
 import { DEFAULT_WEIGHTS } from "@/engine/config"
 import { z } from "zod"
+import { apiError, validationError } from "@/lib/api"
+import { rateLimit } from "@/lib/rateLimit"
 
 export const prerender = false
 
@@ -27,6 +29,9 @@ const schema = z.object({
 })
 
 export const POST: APIRoute = async ({ request }) => {
+  const rl = await rateLimit(request, "recommend")
+  if (rl && rl.status === 429) return rl
+
   let body: unknown
   try {
     body = await request.json()
@@ -39,10 +44,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const parsed = schema.safeParse(body)
   if (!parsed.success) {
-    return new Response(
-      JSON.stringify({ error: "Validation failed", details: parsed.error.errors }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    )
+    return validationError(parsed.error.errors)
   }
 
   const { username, selectedBeer, topN, accessToken } = parsed.data
@@ -93,10 +95,7 @@ export const POST: APIRoute = async ({ request }) => {
       headers: { "Content-Type": "application/json" },
     })
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Unknown error"
-    return new Response(
-      JSON.stringify({ error: message }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
-    )
+    const { body, status } = apiError(err)
+    return new Response(body, { status, headers: { "Content-Type": "application/json" } })
   }
 }
