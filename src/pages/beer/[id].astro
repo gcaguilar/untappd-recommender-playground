@@ -1,0 +1,27 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { BeerDetail } from "@/components/BeerDetail"
+import { t, getTranslations } from "@/i18n"
+
+export const prerender = false
+
+const locale = Astro.i18n?.locale || "en"
+const { id } = Astro.params
+
+const pageTitle = id ? `#${id}` : t(locale, "beerDetail.title")
+---
+
+<BaseLayout title={pageTitle} locale={locale}>
+  <div className="max-w-4xl mx-auto">
+    {id ? (
+      <BeerDetail client:only="react" id={id} locale={locale} />
+    ) : (
+      <div className="text-center py-16">
+        <p className="text-muted-foreground">{t(locale, "beerDetail.notFound")}</p>
+        <a href="/" className="mt-4 inline-block text-primary hover:underline">
+          ← {t(locale, "common.backToBeers")}
+        </a>
+      </div>
+    )}
+  </div>
+</BaseLayout>

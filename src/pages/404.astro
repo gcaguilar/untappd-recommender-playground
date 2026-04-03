@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { t, getTranslations } from "@/i18n"
+
+const url = Astro.request ? new URL(Astro.request.url) : null
+const path = url?.pathname || ""
+const localeMatch = path.match(/^\/(en|es)/)
+const locale = localeMatch ? localeMatch[1] : (Astro.i18n?.locale || "en")
+---
+
+<BaseLayout title={t(locale, "notFound.title")} locale={locale}>
+  <div className="flex flex-col items-center justify-center py-16 text-center">
+    <h1 className="text-4xl font-bold">{t(locale, "notFound.heading")}</h1>
+    <p className="mt-4 text-lg text-muted-foreground">{t(locale, "notFound.message")}</p>
+    <a href="/" className="mt-6 text-primary hover:underline">
+      ← {t(locale, "common.backToHome")}
+    </a>
+  </div>
+</BaseLayout>

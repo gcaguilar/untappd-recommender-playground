@@ -1,17 +1,25 @@
 ---
+import BaseLayout from "@/layouts/BaseLayout.astro"
+import { UntappdApp } from "@/components/untappd/UntappdApp"
+import { t, getTranslations } from "@/i18n"
 
+const locale = Astro.i18n?.locale || "en"
+const translations = getTranslations(locale)
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title={t(locale, "untappd.appTitle")}
+  description={t(locale, "untappd.appDescription")}
+  locale={locale}
+>
+  <div className="space-y-8">
+    <div className="text-center">
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{t(locale, "untappd.appTitle")}</h1>
+      <p className="mt-2 text-muted-foreground">
+        {t(locale, "untappd.appDescription")}
+      </p>
+    </div>
+
+    <UntappdApp client:load locale={locale} />
+  </div>
+</BaseLayout>
